@@ -9,9 +9,9 @@
 namespace org;
 
 
-class eSign
+class PXeSign
 {
-    const TOKEN_CACHED_KEY = 'esign_access';
+    const TOKEN_CACHED_KEY = 'esign_access';// 缓存key值
 
     public $faceAuthMode;// 人脸认证方式
     private $__domain;// API域名
@@ -27,9 +27,9 @@ class eSign
     {
         $this->faceAuthMode = config('setting.esign.face_auth_mode');
         $this->__domain = 'https://smlopenapi.esign.cn';
-        $this->__appId = '4438792956';
-        $this->__secret = 'eb39fc831f24987c89b1661bd49d8daa';
-        $this->__tokenExpireIn = config('setting.esign.token_expire_in');
+        $this->__appId = '';
+        $this->__secret = '';
+        $this->__tokenExpireIn = 7000// 可从配置文件获取;
     }
 
     /**
