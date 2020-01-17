@@ -1,4 +1,5 @@
 <?php
+
 /**
  * E签包相关业务接口
  * @author peak xin<xinyflove@gmail.com>
@@ -6,9 +7,7 @@
  * @referenceDoc https://qianxiaoxia.yuque.com/books/share/8bc54c0d-ebaa-4036-957e-b9a353f86486/shiming
  */
 
-namespace org;
-
-
+require_once '../pxcurl/PXcURL.php';
 class PXeSign
 {
     const TOKEN_CACHED_KEY = 'esign_access';// 缓存key值
@@ -29,7 +28,7 @@ class PXeSign
         $this->__domain = 'https://smlopenapi.esign.cn';
         $this->__appId = '';
         $this->__secret = '';
-        $this->__tokenExpireIn = 7000// 可从配置文件获取;
+        $this->__tokenExpireIn = 7000;// 可从配置文件获取;
     }
 
     /**
@@ -336,6 +335,6 @@ class PXeSign
      */
     private function __log($title='', $params='')
     {
-        file_log($title, $params, 'esign');
+        //file_log($title, $params, 'esign');
     }
 }

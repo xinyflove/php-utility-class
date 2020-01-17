@@ -1,11 +1,10 @@
 <?php
+
 /**
  * cURL请求类
  * @author peak xin<xinyflove@gmail.com>
  * @create 2020-01-16
  */
-
-namespace org;
 
 
 class PXcURL
@@ -142,7 +141,7 @@ class PXcURL
 
     /**
      * 设置响应超时时间
-     * @param int $second [单位秒]
+     * @param int $second [单位秒]如果为0则使用默认超时时间
      * @return $this
      * @author peak xin
      */

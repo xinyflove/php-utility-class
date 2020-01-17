@@ -1,9 +1,11 @@
 <?php
+
 /**
  * 字符串处理类
  * @author peak xin<xinyflove@gmail.com>
  * @create 2020-01-16
  */
+
 
 class PXString
 {
@@ -51,5 +53,16 @@ class PXString
         }
 
         return $str;
+    }
+
+    /**
+     * 去除字符串中所有的空格
+     * @param $str
+     * @return mixed
+     * @author peak xin
+     */
+    public static function trimALl($str)
+    {
+        return str_replace(' ', '', $str);
     }
 }
